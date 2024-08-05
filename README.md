@@ -13,7 +13,7 @@ xUCP Free V5 Log in
 
 ## Prerequisite for using the xUCP Free V5:
 *  1. MySQL servers
-*  2. Web server(XAMPP is not supported!)
+*  2. Web server (XAMPP is not supported!)
 *  3. Mail server
 *  4. Php 8.2.20 or newer
 *  5. PHP8-PDO
