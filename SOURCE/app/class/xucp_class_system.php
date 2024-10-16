@@ -54,25 +54,50 @@ class xUCP_System {
     public function xucp_session_site(): void
     {
         global $db;
-        $select_stmt = $db->prepare("SELECT site_dl_section, site_rage_section, site_altv_section, site_fivem_section, site_redm_section, site_online, site_name, site_themes, site_lang, site_teamspeak, site_gserverport, site_gserverip, site_gservername, site_upgrade_note from xucp_config WHERE id=1");
-        $select_stmt->execute();
-        $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
-        
-        if($select_stmt->rowCount() > 0){
-            $_SESSION['xucp_free']['site_settings_site_online'] = htmlentities($row["site_online"]);
-            $_SESSION['xucp_free']['site_settings_site_name'] = htmlentities($row["site_name"]);
-            $_SESSION['xucp_free']['site_settings_lang'] = htmlentities($row["site_lang"]);
-            $_SESSION['xucp_free']['site_settings_themes'] = htmlentities($row["site_themes"]);
-            $_SESSION['xucp_free']['site_settings_dl_section'] = htmlentities($row["site_dl_section"]);
-            $_SESSION['xucp_free']['site_settings_dl_section_ragemp'] = htmlentities($row["site_rage_section"]);
-            $_SESSION['xucp_free']['site_settings_dl_section_altv'] = htmlentities($row["site_altv_section"]);
-            $_SESSION['xucp_free']['site_settings_dl_section_fivem'] = htmlentities($row["site_fivem_section"]);
-            $_SESSION['xucp_free']['site_settings_dl_section_redm'] = htmlentities($row["site_redm_section"]);
-            $_SESSION['xucp_free']['site_settings_teamspeak'] = htmlentities($row["site_teamspeak"]);
-            $_SESSION['xucp_free']['site_settings_gserver_port'] = htmlentities($row["site_gserverport"]);
-            $_SESSION['xucp_free']['site_settings_gserver_ip'] = htmlentities($row["site_gserverip"]);
-            $_SESSION['xucp_free']['site_settings_gserver_name'] = htmlentities($row["site_gservername"]);
-            $_SESSION['xucp_free']['site_settings_upgrade_note'] = htmlentities($row["site_upgrade_note"]);
+
+        try {
+        // Prepare statement to select site configuration
+            $select_stmt = $db->prepare(
+                "SELECT site_dl_section, site_rage_section, site_altv_section, site_fivem_section, 
+                    site_redm_section, site_online, site_name, site_themes, site_lang, 
+                    site_teamspeak, site_gserverport, site_gserverip, site_gservername, 
+                    site_upgrade_note 
+                FROM xucp_config 
+                WHERE id = 1"
+            );
+
+            // Execute statement
+            $select_stmt->execute();
+            $row = $select_stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Check if we got a result
+            if ($row !== false) {
+                $site_settings = [
+                'site_online'            => $row['site_online'],
+                'site_name'              => $row['site_name'],
+                'site_lang'              => $row['site_lang'],
+                'site_themes'            => $row['site_themes'],
+                'site_dl_section'        => $row['site_dl_section'],
+                'site_rage_section'      => $row['site_rage_section'],
+                'site_altv_section'      => $row['site_altv_section'],
+                'site_fivem_section'     => $row['site_fivem_section'],
+                'site_redm_section'      => $row['site_redm_section'],
+                'site_teamspeak'         => $row['site_teamspeak'],
+                'site_gserverport'       => $row['site_gserverport'],
+                'site_gserverip'         => $row['site_gserverip'],
+                'site_gservername'       => $row['site_gservername'],
+                'site_upgrade_note'      => $row['site_upgrade_note']
+            ];
+
+            // Use htmlentities only where necessary (e.g., for HTML output)
+            foreach ($site_settings as $key => $value) {
+                $_SESSION['xucp_free']['site_settings_' . $key] = htmlentities($value, ENT_QUOTES, 'UTF-8');
+            }
+        }
+
+        } catch (PDOException $e) {
+            // Log the error (ensure error logging is configured properly)
+            error_log("Database error: " . $e->getMessage());
         }
     }
 }

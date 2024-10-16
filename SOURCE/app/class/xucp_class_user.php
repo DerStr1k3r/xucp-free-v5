@@ -14,14 +14,14 @@ class xUCP_User {
     private PDO $db;
     
     public function __construct(PDO $db) {
-        $this->pdo = $db;
+        $this->db = $db;
     }
     
     public function register(string $username, string $password, string $email): void {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
         $token = hash_hmac('sha256', rand().time(), 'xUCP');
         $sql = 'INSERT INTO xucp_accounts (username,email,password,token) VALUES (:xucp_username,:xucp_email,:xucp_password,:xucp_token)';
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute(['xucp_username' => $username, 'xucp_password' => $hashed_password, 'xucp_email' => $email, 'xucp_token' => $token]);
 
         $subject = "".MSG_28." ".$_SESSION['xucp_free']['site_settings_site_name']."";
@@ -37,13 +37,13 @@ class xUCP_User {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
         $token = hash_hmac('sha256', rand().time(), 'xUCP');
         $sql = 'INSERT INTO xucp_accounts (username,email,password,token) VALUES (:xucp_username,:xucp_email,:xucp_password,:xucp_token)';
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute(['xucp_username' => $username, 'xucp_password' => $hashed_password, 'xucp_email' => $email, 'xucp_token' => $token]);
     }
     
     public function checkUsernameExists(string $username): bool {
         $sql = 'SELECT COUNT(*) AS count FROM xucp_accounts WHERE username = :xucp_username';
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute(['xucp_username' => $username]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         
@@ -67,13 +67,13 @@ class xUCP_User {
         $sql .= implode(', ', $fields);
         $sql .= ' WHERE id = :id';
 
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute($params);
     }
     
     public function login(string $username, string $password): bool {
         $sql = 'SELECT * FROM xucp_accounts WHERE username = :xucp_username';
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute(['xucp_username' => $username]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         
@@ -116,7 +116,7 @@ class xUCP_User {
             $userId = $_SESSION['xucp_free']['secure_first'];
             $token = $_SESSION['xucp_free']['secure_token'];
             $sql = 'SELECT COUNT(*) AS count FROM xucp_accounts WHERE id = :id AND token = :token';
-            $stmt = $this->pdo->prepare($sql);
+            $stmt = $this->db->prepare($sql);
             $stmt->execute(['id' => $userId, 'token' => $token]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
     
@@ -138,7 +138,7 @@ class xUCP_User {
     
     public function deleteToken(int $userId): void {
         $sql = 'UPDATE xucp_accounts SET token = "" WHERE id = :id';
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute(['id' => $userId]);
     }
 

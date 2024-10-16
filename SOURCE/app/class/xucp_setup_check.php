@@ -13,7 +13,7 @@
 class xUCP_SetupCheck {
 
     public function xucp_pro_setup_check(): void {
-        if (version_compare(PHP_VERSION, '8.2.20') < 0) {
+        if (version_compare(PHP_VERSION, '8.2.24') < 0) {
             $user = new xUCP_Themes($db);
             $user->xucp_header_install("xUCP Free V5 Setup Check");
             $user->xucp_content_install();
@@ -36,7 +36,7 @@ class xUCP_SetupCheck {
                     <div class="card-body">
                         <div class="d-flex flex-wrap align-items-center justify-content-between">
                             <p>
-                                <b>This is a guide for Debian 11 to Debian 12!</b>
+                                <b>This is a guide for Debian 11 or Debian 12!</b>
                                 <br /><br />
                                 Log in to Putty and connect to your server!
                                 <br /><br />

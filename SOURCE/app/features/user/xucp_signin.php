@@ -57,7 +57,7 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
         $webhook->setUsername(DC_WEBHOOK_NAME);
         $webhook->setAvatarUrl(DC_WEBHOOK_AVATAR);
         $webhook->setAuthor(DC_WEBHOOK_NAME);
-        $webhook->setFooter('Powered by xUCP Free v5.0.1877');
+        $webhook->setFooter('Powered by xUCP Free v5.0.2177');
         
         // Definieren des Inhalts, den du senden möchtest
         $content = DC_WEBHOOK_INFO_LOGIN_1 . " " . $username . " " . DC_WEBHOOK_INFO_LOGIN_2;

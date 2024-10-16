@@ -27,7 +27,7 @@ $user->staff_check_rank();
 
 $hostUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
 
-$versionFile = "https://update-free.derstr1k3r.com/update.txt";
+$versionFile = "https://raw.githubusercontent.com/DerStr1k3r/xucp-free-v5/refs/heads/main/SOURCE/update.txt";
 $referenceVersionFile = "" . $hostUrl . "/reference_version.txt";
 
 $is_staff_support = intval($_SESSION['xucp_free']['secure_staff']) >= UC_CLASS_SUPPORTER;
