@@ -82,7 +82,7 @@ class xUCP_User {
                 $token = bin2hex(random_bytes(32));
 
                 $updateTokenSql = 'UPDATE xucp_accounts SET token = :token WHERE id = :id';
-                $updateTokenStmt = $this->pdo->prepare($updateTokenSql);
+                $updateTokenStmt = $this->db->prepare($updateTokenSql);
                 $updateTokenStmt->execute(['token' => $token, 'id' => $user['id']]);
 
                 $_SESSION['xucp_free'] = [
