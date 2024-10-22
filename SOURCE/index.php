@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // * 
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -13,4 +13,4 @@
 include_once(dirname(__FILE__) . "/app/system.php");
 
 $setupChecker = new xUCP_SetupCheck();
-$setupChecker->xucp_pro_setup_check();
+$setupChecker->xucp_free_setup_check();

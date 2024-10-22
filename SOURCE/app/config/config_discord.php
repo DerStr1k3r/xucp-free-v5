@@ -4,18 +4,25 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
-// * License Typ: GNU GPLv3
+// * License Type: GNU GPLv3
 // ************************************************************************************//
+header('X-Frame-Options: DENY'); // Verhindert Clickjacking
+header('X-Content-Type-Options: nosniff'); // Verhindert MIME-Type Sniffing
+
+// Blockiere direkte GET-Anfragen an dieses Skript
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && realpath(__FILE__) === realpath($_SERVER['SCRIPT_FILENAME'])) {
     // Setze den HTTP-Statuscode auf 403 Forbidden
     http_response_code(403);
     
     // Lösche das Session-Cookie und beende die Session
-    setcookie("PHPSESSID", "", time() - 3600, "/");
+    if (isset($_COOKIE['PHPSESSID'])) {
+        setcookie("PHPSESSID", "", time() - 3600, "/");
+    }
+    session_start(); // Session sollte gestartet sein, bevor sie zerstört wird
     session_unset();
     session_destroy();
     
@@ -26,14 +33,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && realpath(__FILE__) === realpath($_SE
 // ************************************************************************************//
 // * Discord Web-Hook Settings
 // ************************************************************************************//
-const DC_WEBHOOK_URL = "https://discord.com/api/webhooks/.....";
+define('DC_WEBHOOK_URL', getenv('DC_WEBHOOK_URL') ?: 'default_webhook_url');
 
 // ************************************************************************************//
 // * Discord Web-Hook Avatar Settings
 // ************************************************************************************//
-const DC_WEBHOOK_AVATAR = "https://.......";
+define('DC_WEBHOOK_AVATAR', getenv('DC_WEBHOOK_AVATAR') ?: 'default_avatar_url');
 
 // ************************************************************************************//
 // * Discord Web-Hook Botname Settings
 // ************************************************************************************//
-const DC_WEBHOOK_NAME = "DerStr1k3r.com | xUCP Pro V5";
+define('DC_WEBHOOK_NAME', getenv('DC_WEBHOOK_NAME') ?: 'default_webhook_name');
+
+// ************************************************************************************//
+// * Discord Client-ID Settings
+// ************************************************************************************//
+define('DC_CLIENT_ID', getenv('DC_CLIENT_ID') ?: 'default_dc_client_id');
+
+// ************************************************************************************//
+// * Discord Client-Secret Settings
+// ************************************************************************************//
+define('DC_CLIENT_SECRET', getenv('DC_CLIENT_SECRET') ?: 'default_dc_client_secret');

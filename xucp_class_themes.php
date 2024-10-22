@@ -1,10 +1,10 @@
 <?php
 // ************************************************************************************//
-// * xUCP Pro
+// * xUCP Free
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -27,7 +27,7 @@ class xUCP_Themes {
     header("Feature-Policy: vibrate 'self'; user-media *; sync-xhr 'self'");        
     echo "
     <!-- ####################################################### -->
-    <!-- #   Powered by xUCP Pro V5.0                          # -->
+    <!-- #   Powered by xUCP Free V5.1                         # -->
     <!-- #   Copyright (c) 2024 DerStr1k3r.                    # -->
     <!-- #   All rights reserved.                              # -->
     <!-- ####################################################### -->
@@ -36,7 +36,7 @@ class xUCP_Themes {
       <head>
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-        <title>".$_SESSION['xucp_pro']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
+        <title>".$_SESSION['xucp_free']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
         <link rel='shortcut icon' href='/public/images/logo.png' />
         <link rel='stylesheet' href='/public/css/libs.min.css'>
         <link rel='stylesheet' href='/public/css/xucp-pro-v5.css?v=5.0.0'>
@@ -178,16 +178,16 @@ class xUCP_Themes {
     header("Feature-Policy: vibrate 'self'; user-media *; sync-xhr 'self'");        
     echo "        
 <!-- ####################################################### -->
-<!-- #   Powered by xUCP Pro V5.0                          # -->
+<!-- #   Powered by xUCP Free V5.1                         # -->
 <!-- #   Copyright (c) 2024 DerStr1k3r.                    # -->
 <!-- #   All rights reserved.                              # -->
 <!-- ####################################################### -->
 <!doctype html>
-<html lang='".$_SESSION['xucp_pro']['site_settings_lang']."'>
+<html lang='".$_SESSION['xucp_free']['site_settings_lang']."'>
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <title>".$_SESSION['xucp_pro']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
+    <title>".$_SESSION['xucp_free']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
     <link rel='shortcut icon' href='/public/images/logo.png' />
     <link rel='stylesheet' href='/public/css/libs.min.css'>
     <link rel='stylesheet' href='/public/css/icons.css'>
@@ -462,7 +462,7 @@ class xUCP_Themes {
                             </a>
                         </li>
                         <li class='nav-item '>
-                            <a class='nav-link' aria-current='page' href='ts3server://".$_SESSION['xucp_pro']['site_settings_teamspeak']."'>
+                            <a class='nav-link' aria-current='page' href='ts3server://".$_SESSION['xucp_free']['site_settings_teamspeak']."'>
                                     <i class='icon'>
                                         <svg width='22' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                             <path d='M12.0004 22.0001V18.8391' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path>
@@ -599,7 +599,7 @@ class xUCP_Themes {
                                     </li>                                                                        
                             </ul>
                         </li>";
-        if(intval($_SESSION['xucp_pro']['secure_staff']) >= UC_CLASS_SUPPORTER) {
+        if(intval($_SESSION['xucp_free']['secure_staff']) >= UC_CLASS_SUPPORTER) {
             echo "
                         <li class='nav-item '>
                             <a class='nav-link' aria-current='page' href='/vendor/backend/staff/team_control/index'>
@@ -685,7 +685,7 @@ class xUCP_Themes {
         header("Feature-Policy: vibrate 'self'; user-media *; sync-xhr 'self'");        
         echo "
 <!-- ####################################################### -->
-<!-- #   Powered by xUCP Pro V5.0                          # -->
+<!-- #   Powered by xUCP Free V5.1                         # -->
 <!-- #   Copyright (c) 2024 DerStr1k3r.                    # -->
 <!-- #   All rights reserved.                              # -->
 <!-- ####################################################### -->
@@ -694,7 +694,7 @@ class xUCP_Themes {
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <title>".$_SESSION['xucp_pro']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
+    <title>".$_SESSION['xucp_free']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
     <link rel='shortcut icon' href='/public/images/logo.png' />
     <link rel='stylesheet' href='/public/css/libs.min.css'>
     <link rel='stylesheet' href='/public/css/xucp-pro-v5.css?v=5.0.0'>

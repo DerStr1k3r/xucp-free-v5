@@ -4,11 +4,11 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
-// * 
+// * Version: 5.1
+// *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
-// * License Typ: GNU GPLv3
+// * License Type: GNU GPLv3
 // ************************************************************************************//
 global $db;
 include_once(dirname(__FILE__) . "/../../../app/system.php");
@@ -47,26 +47,14 @@ if('POST' == $_SERVER['REQUEST_METHOD'] && isset($_POST['xucp_login'])){
       </div>";
       die();
     }
+    $hostUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
     
     $user = new xUCP_User($db);
-    if ($user->login($username, $password)) {
-        // Erstellen einer Instanz der DiscordWebhook-Klasse
-        $webhook = new xUCP_Discord(DC_WEBHOOK_URL);
-        
-        // Festlegen von benutzerdefinierten Werten wie Benutzername, Avatar-URL, Autor und Fußzeile
-        $webhook->setUsername(DC_WEBHOOK_NAME);
-        $webhook->setAvatarUrl(DC_WEBHOOK_AVATAR);
-        $webhook->setAuthor(DC_WEBHOOK_NAME);
-        $webhook->setFooter('Powered by xUCP Free v5.0.2183');
-        
-        // Definieren des Inhalts, den du senden möchtest
-        $content = DC_WEBHOOK_INFO_LOGIN_1 . " " . $username . " " . DC_WEBHOOK_INFO_LOGIN_2;
-        
-        // Senden des Inhalts an Discord
-        $response = $webhook->send($content);
-        
-        // Ausgabe der Antwort von Discord (optional)
-        echo $response;
+    $clientId = DC_CLIENT_ID;
+    $clientSecret = DC_CLIENT_SECRET;
+    $redirectUri = "" . $hostUrl . "/app/features/user/xucp_signin_callback";
+
+    if ($user->discordLogin($clientId, $clientSecret, $redirectUri)) {
         header('Location: /vendor/backend/user/dashboard/index');
         exit;
     } else {

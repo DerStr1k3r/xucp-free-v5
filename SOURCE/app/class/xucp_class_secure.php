@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -19,6 +19,8 @@ class xUCP_Secure {
    
     // Generiert ein neues CSRF-Token und speichert es in der Session
     public static function staff_check(): void {
+      global $db;
+    
         if(!isset($_SESSION['xucp_free']['secure_staff']) > UC_CLASS_SUPPORTER) {
             $user = new xUCP_Themes($db);
             $user->xucp_header_none_logged(SECURE_SYSTEM);
@@ -52,6 +54,8 @@ class xUCP_Secure {
     }
     
     public static function supleader_check(): void {
+      global $db;
+          
         if(!isset($_SESSION['xucp_free']['secure_staff']) > UC_CLASS_SUPPORTER) {
             $user = new xUCP_Themes($db);
             $user->xucp_header_none_logged(SECURE_SYSTEM);
@@ -85,6 +89,8 @@ class xUCP_Secure {
     }
     
     public static function staff_check_rank(): void {
+      global $db;
+          
         if(!isset($_SESSION['xucp_free']['secure_staff']) > UC_CLASS_PROJECT_MANAGEMENT) {
             $user = new xUCP_Themes($db);
             $user->xucp_header_none_logged(SECURE_SYSTEM);

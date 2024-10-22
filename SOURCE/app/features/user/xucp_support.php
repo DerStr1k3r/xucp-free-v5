@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -58,7 +58,7 @@ if(isset($_REQUEST['xucp_submit']))
                             $webhook->setUsername(DC_WEBHOOK_NAME);
                             $webhook->setAvatarUrl(DC_WEBHOOK_AVATAR);
                             $webhook->setAuthor(DC_WEBHOOK_NAME);
-                            $webhook->setFooter('Powered by xUCP Free v5.0.2183');
+                            $webhook->setFooter('Powered by xUCP Free v5.1.1429');
                             
                             // Definieren des Inhalts, den du senden möchtest
                             $content = DC_WEBHOOK_INFO_SUPPORT_TICKET_ADDED . " " . $msg;

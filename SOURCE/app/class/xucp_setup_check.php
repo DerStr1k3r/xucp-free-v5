@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -12,7 +12,7 @@
 // ************************************************************************************//
 class xUCP_SetupCheck {
 
-    public function xucp_pro_setup_check(): void {
+    public function xucp_free_setup_check(): void {
         if (version_compare(PHP_VERSION, '8.2.24') < 0) {
             $user = new xUCP_Themes($db);
             $user->xucp_header_install("xUCP Free V5 Setup Check");

@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -342,7 +342,7 @@ const EMAIL = "E-Mail";
 const PASSWORD = "Passwort";
 const SUBMIT = "Senden";
 const RULES = "Regeln";
-const NOTE = "<b>Hinweis:</b> Felder mit <span class='pflichtfeld'>*</span> m&uuml;ssen ausgef&uuml;llt werden.";
+const NOTE = "<b>Hinweis:</b> Dein Log in wird per Discord erfolgen, wenn du noch kein Account haben solltest, dann wirst du automatisch registriert.";
 const NOTE2 = "<b>Hinweis:</b> Der Username sowie der Social Club Name m&uuml;ssen gleich sein.";
 const NOTE3 = "<b>Hinweis:</b> Sie haben kein Account?";
 const NOTE4 = "<b>Hinweis:</b> Sie haben ein Account ?";

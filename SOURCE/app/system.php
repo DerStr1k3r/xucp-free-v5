@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -15,6 +15,37 @@
 global $db;
 ob_start();
 session_start();
+
+// ************************************************************************************//
+// * ENV Config File Loader
+// ************************************************************************************//
+function loadEnvFile($filePath) {
+    // Converts the path to an absolute path
+    $filePath = realpath($filePath); 
+
+    if ($filePath === false) {
+        throw new Exception('.env file not found at ' . $filePath);
+    }
+
+    if (!file_exists($filePath)) {
+        throw new Exception('.env file not found at ' . $filePath);
+    }
+
+    $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos(trim($line), '#') === 0) {
+            continue; // Ignore comments
+        }
+
+        list($name, $value) = explode('=', $line, 2);
+        putenv(trim($name) . '=' . trim($value));
+    }
+}
+
+// ************************************************************************************//
+// * Example of calling with absolute path
+// ************************************************************************************//
+loadEnvFile(dirname(__FILE__) . '/../.env');
 
 // ************************************************************************************//
 // * Config files
@@ -46,8 +77,8 @@ require_once(dirname(__FILE__) . "/class/xucp_class_user_profile_updater.php");
 // Autoload System
 // ************************************************************************************//
 $user = new xUCP_System($db);
-$user->xucp_session_site();
 $user->xucp_secure_lang();
+$user->xucp_session_site();
 
 // ************************************************************************************//
 // Logout System

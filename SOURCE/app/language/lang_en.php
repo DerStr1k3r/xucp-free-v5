@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -337,7 +337,7 @@ const USERNAME = "Username";
 const EMAIL = "Email";
 const PASSWORD = "Password";
 const SUBMIT = "Submit";
-const NOTE = "<b>Note:</b> Fields with <span class='phpflickr'>*</span> have to be filled out.";
+const NOTE = "<b>Note:</b> You will log in via Discord. If you don't have an account yet, you will be registered automatically.";
 const NOTE2 = "<b>Note:</b> The username and the social club name must be the same.";
 const NOTE3 = "<b>Note:</b> Don't have an account ?";
 const NOTE4 = "<b>Note:</b> You have an account ?";

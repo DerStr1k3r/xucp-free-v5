@@ -4,7 +4,7 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.0
+// * Version: 5.1
 // *
 // * Copyright (c) 2024 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
@@ -27,7 +27,7 @@ class xUCP_Themes {
     header("Feature-Policy: vibrate 'self'; user-media *; sync-xhr 'self'");        
     echo "
 <!-- ####################################################### -->
-<!-- #   Powered by xUCP Free V5.0                         # -->
+<!-- #   Powered by xUCP Free V5.1                         # -->
 <!-- #   Copyright (c) 2024 DerStr1k3r.                    # -->
 <!-- #   All rights reserved.                              # -->
 <!-- ####################################################### -->
@@ -518,7 +518,7 @@ class xUCP_Themes {
 								</svg>
                                     </div>
                                     <p class='mb-0'>Be more secure with Pro Feature</p>
-                                    <a href='https://discord.derstr1k3r.com' class='btn btn-primary mt-3'>Upgrade Now</a>
+                                    <a href='https://discord.gg/fJArWgXSMh' class='btn btn-primary mt-3'>Upgrade Now</a>
                             </div>
                         </div>
                     </div>
@@ -589,7 +589,7 @@ class xUCP_Themes {
     header("Feature-Policy: vibrate 'self'; user-media *; sync-xhr 'self'");        
     echo "        
 <!-- ####################################################### -->
-<!-- #   Powered by xUCP Free V5.0                         # -->
+<!-- #   Powered by xUCP Free V5.1                         # -->
 <!-- #   Copyright (c) 2024 DerStr1k3r.                    # -->
 <!-- #   All rights reserved.                              # -->
 <!-- ####################################################### -->
@@ -1283,7 +1283,7 @@ class xUCP_Themes {
         header("Feature-Policy: vibrate 'self'; user-media *; sync-xhr 'self'");        
         echo "
 <!-- ####################################################### -->
-<!-- #   Powered by xUCP Free V5.0                         # -->
+<!-- #   Powered by xUCP Free V5.1                         # -->
 <!-- #   Copyright (c) 2024 DerStr1k3r.                    # -->
 <!-- #   All rights reserved.                              # -->
 <!-- ####################################################### -->
@@ -1561,7 +1561,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.0.2183
+                  xUCP Free v5.1.1429
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1590,7 +1590,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.0.2183
+                  xUCP Free v5.1.1429
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1614,13 +1614,12 @@ class xUCP_Themes {
         // Modal System
         // ************************************************************************************//
         include(dirname(__FILE__) . "/../../app/modal/xucp_modal_signin.php");
-        include(dirname(__FILE__) . "/../../app/modal/xucp_modal_signup.php");
         echo "
       </div>
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.0.2183
+                  xUCP Free v5.1.1429
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
