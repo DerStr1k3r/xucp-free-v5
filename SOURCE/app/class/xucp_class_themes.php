@@ -562,7 +562,7 @@ class xUCP_Themes {
                       </a>
                     </li>
                     <li class='nav-item dropdown'>
-                      <a class='nav-link py-0 d-flex align-items-center' href='#' data-bs-toggle='modal' data-bs-target='#registerModal'>
+                      <a class='nav-link py-0 d-flex align-items-center' href='#' data-bs-toggle='modal' data-bs-target='#loginModal'>
                         <svg width='22' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
                             <path fill-rule='evenodd' clip-rule='evenodd' d='M11.9846 21.606C11.9846 21.606 19.6566 19.283 19.6566 12.879C19.6566 6.474 19.9346 5.974 19.3196 5.358C18.7036 4.742 12.9906 2.75 11.9846 2.75C10.9786 2.75 5.26557 4.742 4.65057 5.358C4.03457 5.974 4.31257 6.474 4.31257 12.879C4.31257 19.283 11.9846 21.606 11.9846 21.606Z' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path>
                             <path d='M9.38574 11.8746L11.2777 13.7696L15.1757 9.86963' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path>
@@ -1561,7 +1561,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1429
+                  xUCP Free v5.1.1430
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1590,7 +1590,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1429
+                  xUCP Free v5.1.1430
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1619,7 +1619,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1429
+                  xUCP Free v5.1.1430
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
