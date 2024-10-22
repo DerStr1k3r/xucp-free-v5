@@ -22,5 +22,5 @@ Go to "OAuth2" and copy the "Client Secret". You will need these two values â€‹â
 2. Configure your server
 Make sure your server is able to use HTTPS, as Discord authentication only works over secure connections.
 
-3. Configure your xUCP Pro V5
+3. Configure your xUCP Free V5
 Open the .env file and configure your discord Settings.
