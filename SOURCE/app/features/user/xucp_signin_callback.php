@@ -62,7 +62,7 @@ if (isset($_GET['code'])) {
             $webhook->setUsername(DC_WEBHOOK_NAME);
             $webhook->setAvatarUrl(DC_WEBHOOK_AVATAR);
             $webhook->setAuthor(DC_WEBHOOK_NAME);
-            $webhook->setFooter('Powered by xUCP Free v5.1.1430');
+            $webhook->setFooter('Powered by xUCP Free v5.1.1431');
 
             $content = DC_WEBHOOK_INFO_LOGIN_1 . " " . $username . " " . DC_WEBHOOK_INFO_LOGIN_2;
 

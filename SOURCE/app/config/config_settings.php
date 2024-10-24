@@ -33,11 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && realpath(__FILE__) === realpath($_SE
 // ************************************************************************************//
 // * E-Mail System
 // ************************************************************************************//
-const SITE_EMAIL = "noreplay@xxx.com";
+define('SITE_EMAIL', getenv('SITE_EMAIL') ?: 'default_email');
 // ************************************************************************************//
 // * Site Login Secure System
 // ************************************************************************************//
-// SHA-512 Cryptographic Hash Algorithm
-const SITE_LOGIN_SECURE_ALGO = "sha512";
-// Your keywords
-const SITE_LOGIN_SECURE_ALGO_ENCRYPT = "xUCP Free V5";
+define('SITE_LOGIN_SECURE_ALGO', getenv('SITE_LOGIN_SECURE_ALGO') ?: 'default_algo');
+define('SITE_LOGIN_SECURE_ALGO_ENCRYPT', getenv('SITE_LOGIN_SECURE_ALGO_ENCRYPT') ?: 'default_encrypt_algo');

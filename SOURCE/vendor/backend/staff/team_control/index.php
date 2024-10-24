@@ -27,7 +27,7 @@ $user->staff_check_rank();
 
 $hostUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
 
-$versionFile = "https://raw.githubusercontent.com/DerStr1k3r/xucp-free-v5/refs/heads/main/SOURCE/update.txt";
+$versionFile = "https://raw.githubusercontent.com/DerStr1k3r/xucp-free-v5/refs/heads/main/update.txt";
 $referenceVersionFile = "" . $hostUrl . "/reference_version.txt";
 
 $is_staff_support = intval($_SESSION['xucp_free']['secure_staff']) >= UC_CLASS_SUPPORTER;
@@ -73,7 +73,7 @@ echo "
 													echo "".XUCP_UPDATE_STATUS_NOTE3."";
 												}
 											} catch (Exception $e) {
-												echo "Fehler: " . $e->getMessage();
+												echo "Error: " . $e->getMessage();
 											}																						
 echo "												
 											</td>
@@ -86,7 +86,7 @@ echo "
 													echo "".XUCP_UPDATE_STATUS_NOTE4."";
 												}
 											} catch (Exception $e) {
-												echo "Fehler: " . $e->getMessage();
+												echo "Error: " . $e->getMessage();
 											}
 echo "												
 											</td>																	
