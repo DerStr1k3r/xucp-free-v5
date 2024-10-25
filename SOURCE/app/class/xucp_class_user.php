@@ -150,10 +150,16 @@ class xUCP_User {
 
     public function addUser(string $username, string $password, string $email, string $discordid): void {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        $token = hash_hmac('sha256', rand().time(), 'xUCP');
+        $token = bin2hex(random_bytes(32));
         $sql = 'INSERT INTO xucp_accounts (username,email,password,discord_id,token) VALUES (:xucp_username,:xucp_email,:xucp_password,:xucp_discord_id,:xucp_token)';
         $stmt = $this->db->prepare($sql);
-        $stmt->execute(['xucp_username' => $username, 'xucp_password' => $hashed_password, 'xucp_email' => $email, 'xucp_discord_id' => $discordid, 'xucp_token' => $token]);
+        $stmt->execute([
+            'xucp_username' => $username, 
+            'xucp_password' => $hashed_password, 
+            'xucp_email' => $email, 
+            'xucp_discord_id' => $discordid, 
+            'xucp_token' => $token
+        ]);
     }
 
     public function updateUser(int $userId, array $data): void {

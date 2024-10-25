@@ -39,6 +39,7 @@ const GSERVER_INFO_HEAD = "Client & Server";
 const GSERVER_INFO_01 = "Here in the list you can see all information about our game servers!";
 const GSERVER_INFO_02 = "For further questions please contact the support!";
 const GO_TO_SITE = "Open";
+const GO_TO_CLOSE = "Close";
 // ************************************************************************************//
 // * My Whitelist Status Language Section - Main 
 // ************************************************************************************//
