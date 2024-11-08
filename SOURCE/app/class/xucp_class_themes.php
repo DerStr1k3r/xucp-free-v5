@@ -1561,7 +1561,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1432
+                  xUCP Free v5.1.1439
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1590,7 +1590,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1432
+                  xUCP Free v5.1.1439
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1619,7 +1619,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1432
+                  xUCP Free v5.1.1439
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.

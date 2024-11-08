@@ -45,7 +45,12 @@ function loadEnvFile($filePath) {
 // ************************************************************************************//
 // * Example of calling with absolute path
 // ************************************************************************************//
-loadEnvFile(dirname(__FILE__) . '/../.env');
+try {
+    loadEnvFile(dirname(__FILE__) . '/../.env');
+} catch (Exception $e) {
+    echo 'Error loading .env file: ' . $e->getMessage();
+    exit;
+}
 
 // ************************************************************************************//
 // * Config files
