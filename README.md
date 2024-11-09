@@ -7,6 +7,10 @@ However, it is very small and does not contain everything that is in the xUCP Pr
 *  https://derstr1k3r.com
 *  https://discord.gg/xg5mnYUWch
 
+## xUCP Pro V5:
+*  Want the Pro version? Then check out our pro version.
+*  https://xucp-pro-v5.derstr1k3r.com
+
 ## xUCP Free V5 Admin Level Rank:
 *  SQL: xucp_accounts
 *  SQL TABLE: adminlevel =>set in your account to 120
