@@ -14,7 +14,15 @@
 // ************************************************************************************//
 global $db;
 ob_start();
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start([
+        'cookie_lifetime' => 0,
+        'cookie_httponly' => true,
+        'use_strict_mode' => true,
+        'use_only_cookies' => true,
+        'cookie_secure' => isset($_SERVER['HTTPS']),
+    ]);
+}
 
 // ************************************************************************************//
 // * ENV Config File Loader
@@ -88,9 +96,16 @@ $user->xucp_session_site();
 // ************************************************************************************//
 // Logout System
 // ************************************************************************************//
-if (isset($_POST['logout'])) {
-    $user = new xUCP_User($db);
-    $user->logout();
-    header("refresh:1; /index");
-    exit();
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
+    try {
+        $user = new xUCP_User($db);
+        $user->logout();
+
+        // HTTP-Redirect für mehr Sicherheit
+        header('Location: /index', true, 302);
+        exit;
+    } catch (Throwable $e) {
+        error_log('Error during logout: ' . $e->getMessage());
+        echo 'An error occurred while logging out. Please try again.';
+    }
 }

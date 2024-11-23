@@ -24,7 +24,15 @@ class xUCP_UserProfileUpdater {
     }
 
     private function updateUserProfile() {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start([
+                'cookie_lifetime' => 0,
+                'cookie_httponly' => true,
+                'use_strict_mode' => true,
+                'use_only_cookies' => true,
+                'cookie_secure' => isset($_SERVER['HTTPS']),
+            ]);
+        }
         $userId = $_SESSION['xucp_free']['secure_first'];
         $newData = [
             'email' => filter_input(INPUT_POST, 'xucp_email', FILTER_SANITIZE_EMAIL),

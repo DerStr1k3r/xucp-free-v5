@@ -39,7 +39,7 @@ class xUCP_Themes {
     <title>".$_SESSION['xucp_free']['site_settings_site_name']." | ".$SITE_SUB_TITLE."</title>
     <link rel='shortcut icon' href='/public/images/logo.png' />
     <link rel='stylesheet' href='/public/css/libs.min.css'>
-    <link rel='stylesheet' href='/public/css/xucp-pro-v5.css?v=5.0.0'>
+    <link rel='stylesheet' href='/public/css/xucp-pro-v5.css?v=5.1.0'>
   </head>
   <body class=''>
     <div id='loading'>
@@ -602,7 +602,7 @@ class xUCP_Themes {
     <link rel='shortcut icon' href='/public/images/logo.png' />
     <link rel='stylesheet' href='/public/css/libs.min.css'>
     <link rel='stylesheet' href='/public/css/icons.css'>
-    <link rel='stylesheet' href='/public/css/xucp-pro-v5.css?v=5.0.0'>
+    <link rel='stylesheet' href='/public/css/xucp-pro-v5.css?v=5.1.0'>
   </head>
   <body class=''>
     <div id='loading'>
@@ -1222,8 +1222,8 @@ class xUCP_Themes {
 									b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC' />
 								</svg>
                                     </div>
-                                    <p class='mb-0'>Be more secure with Pro Feature</p>
-                                    <a href='https://discord.derstr1k3r.com' class='btn btn-primary mt-3'>Upgrade Now</a>
+                                    <p class='mb-0'>Be more secure with Ultimate Version?</p>
+                                    <a href='https://discord.gg/fJArWgXSMh' class='btn btn-primary mt-3'>Upgrade Now</a>
                             </div>
                         </div>
                     </div>
@@ -1561,7 +1561,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1439
+                  xUCP Free v5.1.1456
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1590,7 +1590,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1439
+                  xUCP Free v5.1.1456
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1619,7 +1619,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1439
+                  xUCP Free v5.1.1456
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
