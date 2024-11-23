@@ -517,7 +517,7 @@ class xUCP_Themes {
 									b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC' />
 								</svg>
                                     </div>
-                                    <p class='mb-0'>Be more secure with Pro Feature</p>
+                                    <p class='mb-0'>Be more secure with Ultimate Version?</p>
                                     <a href='https://discord.gg/fJArWgXSMh' class='btn btn-primary mt-3'>Upgrade Now</a>
                             </div>
                         </div>
@@ -1561,7 +1561,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1456
+                  xUCP Free v5.1.1457
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1590,7 +1590,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1456
+                  xUCP Free v5.1.1457
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
@@ -1619,7 +1619,7 @@ class xUCP_Themes {
       <footer class='footer'>
           <div class='footer-body'>
               <div class='left-panel'>
-                  xUCP Free v5.1.1456
+                  xUCP Free v5.1.1457
               </div>
               <div class='right-panel'>
                   © <script>document.write(new Date().getFullYear())</script> DerStr1k3r.com. All rights reserved.
