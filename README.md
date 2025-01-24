@@ -9,11 +9,11 @@ However, it is very small and does not contain everything that is in the xUCP Pr
 
 ## xUCP Ultimate V5:
 *  Want the Ultimate version? Then check out our Ultimate version.
-*  https://xucp-ultimate-v5.derstr1k3r.com
+*  https://xucp-ultimate.str1k3r.com
 
 ## xUCP Pro V5:
 *  Want the Pro version? Then check out our Pro version.
-*  https://xucp-pro-v5.derstr1k3r.com
+*  https://xucp-pro.str1k3r.com
 
 ## xUCP Free V5 Admin Level Rank:
 *  SQL: xucp_accounts
