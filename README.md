@@ -3,8 +3,8 @@ The new xUCP Free V5 Version is a completely new development.
 However, it is very small and does not contain everything that is in the xUCP Pro V5.
 
 ## xUCP Free V5 (Open Source) Readme
-*  (C) 2024 DerStr1k3r.com
-*  https://derstr1k3r.com
+*  (C) 2024 - 2025 Str1k3r.com
+*  https://str1k3r.com
 *  https://discord.gg/xg5mnYUWch
 
 ## xUCP Ultimate V5:
