@@ -4,9 +4,9 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.1
+// * Version: 5.2
 // *
-// * Copyright (c) 2024 DerStr1k3r. All rights reserved.
+// * Copyright (c) 2024 - 2025 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
 // ************************************************************************************//
@@ -22,8 +22,7 @@ $user = new xUCP_Themes($db);
 $user->xucp_header_logged(WHITELIST_HEADER);
 $user->xucp_content_logged();
 
-$user = new xUCP_Secure($db);
-$user->staff_check();
+xUCP_Secure::staff_check();
 
 $select_stmt = $db->prepare("SELECT frage1, frage2, frage3, frage4, frage5, frage6, frage7, frage8, frage9, frage10, frage11, frage12 FROM xucp_config WHERE id = 1");
 $select_stmt->execute();

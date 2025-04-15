@@ -4,9 +4,9 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.1
+// * Version: 5.2
 // *
-// * Copyright (c) 2024 DerStr1k3r. All rights reserved.
+// * Copyright (c) 2024 - 2025 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
 // ************************************************************************************//
@@ -330,8 +330,8 @@ const SUPPORTOPTIONS_PRINT = "Print";
 // ************************************************************************************//
 // * English Language Section - No Logged & Logged Section
 // ************************************************************************************//
-const REGISTER = "Register";
-const LOGIN = "Login";
+const REGISTER = "Sign up";
+const LOGIN = "Sign in";
 const LOGOUT = "Logout";
 const SOCIALCLUBNAME = "Social Club Name";
 const USERNAME = "Username";

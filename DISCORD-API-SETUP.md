@@ -1,6 +1,6 @@
 xUCP Free V5 Readme
-(C) 2024 DerStr1k3r.com
-https://derstr1k3r.com
+(C) 2024 - 2025 Str1k3r.com
+https://str1k3r.com
 https://discord.gg/xg5mnYUWch
 
 1. Create a Discord application

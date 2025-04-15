@@ -4,9 +4,9 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.1
+// * Version: 5.2
 // *
-// * Copyright (c) 2024 DerStr1k3r. All rights reserved.
+// * Copyright (c) 2024 - 2025 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Type: GNU GPLv3
 // ************************************************************************************//
@@ -62,7 +62,7 @@ if (isset($_GET['code'])) {
             $webhook->setUsername(DC_WEBHOOK_NAME);
             $webhook->setAvatarUrl(DC_WEBHOOK_AVATAR);
             $webhook->setAuthor(DC_WEBHOOK_NAME);
-            $webhook->setFooter('Powered by xUCP Free v5.1.1457');
+            $webhook->setFooter('Powered by xUCP Free v5.2.1796');
 
             $content = DC_WEBHOOK_INFO_LOGIN_1 . " " . $username . " " . DC_WEBHOOK_INFO_LOGIN_2;
 

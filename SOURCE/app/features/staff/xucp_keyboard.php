@@ -4,9 +4,9 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.1
+// * Version: 5.2
 // *
-// * Copyright (c) 2024 DerStr1k3r. All rights reserved.
+// * Copyright (c) 2024 - 2025 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
 // ************************************************************************************//
@@ -23,8 +23,7 @@ $user = new xUCP_Themes($db);
 $user->xucp_header_logged(KEY_HEADER);
 $user->xucp_content_logged();
 
-$user = new xUCP_Secure($db);
-$user->staff_check_rank();
+xUCP_Secure::staff_check_rank();
 
 if (isset($_REQUEST['xucp_submit'])) {
     $key_config_uid = 1;

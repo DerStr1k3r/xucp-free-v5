@@ -4,9 +4,9 @@
 // ************************************************************************************//
 // * Author: DerStr1k3r
 // ************************************************************************************//
-// * Version: 5.1
+// * Version: 5.2
 // *
-// * Copyright (c) 2024 DerStr1k3r. All rights reserved.
+// * Copyright (c) 2024 - 2025 DerStr1k3r. All rights reserved.
 // ************************************************************************************//
 // * License Typ: GNU GPLv3
 // ************************************************************************************//
@@ -22,8 +22,7 @@ $user = new xUCP_Themes($db);
 $user->xucp_header_logged(DC_WEBHOOK_HEADER);
 $user->xucp_content_logged();
 
-$user = new xUCP_Secure($db);
-$user->staff_check_rank();
+xUCP_Secure::staff_check_rank();
 
 if(isset($_REQUEST['xucp_submit']))
 {
@@ -46,7 +45,7 @@ if(isset($_REQUEST['xucp_submit']))
                 $webhook->setUsername(DC_WEBHOOK_NAME);
                 $webhook->setAvatarUrl(DC_WEBHOOK_AVATAR);
                 $webhook->setAuthor(DC_WEBHOOK_NAME);
-                $webhook->setFooter('Powered by xUCP Free v5.1.1457');
+                $webhook->setFooter('Powered by xUCP Free v5.2.1796');
                 
                 // Definieren des Inhalts, den du senden möchtest
                 $content = $msg;

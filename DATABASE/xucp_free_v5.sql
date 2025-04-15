@@ -182,7 +182,7 @@ CREATE TABLE `xucp_news` (
 --
 
 INSERT INTO `xucp_news` (`id`, `title`, `title_de`, `content`, `content_de`) VALUES
-(1, 'Release: xUCP Ultimate V5', 'Release: xUCP Ultimate V5', '[b]Search support?[/b]\r\n[br][br]\r\nJoin my discord server: [url=https://discord.derstr1k3r.com]here[/url]\r\n[br][br]\r\nbest regards\r\n[br]\r\nDerStr1k3r', '[b]Search support?[/b]\r\n[br][br][br]\r\nJoin my discord server: [url=https://discord.derstr1k3r.com]here[/url]\r\n[br][br]\r\nbest regards\r\n[br]\r\nDerStr1k3r');
+(1, 'Release: xUCP Ultimate V5', 'Release: xUCP Ultimate V5', '[b]Search support?[/b]\r\n[br][br]\r\nJoin my discord server: [url=https://discord.gg/fJArWgXSMh]here[/url]\r\n[br][br]\r\nbest regards\r\n[br]\r\nDerStr1k3r', '[b]Search support?[/b]\r\n[br][br][br]\r\nJoin my discord server: [url=https://discord.gg/fJArWgXSMh]here[/url]\r\n[br][br]\r\nbest regards\r\n[br]\r\nDerStr1k3r');
 
 -- --------------------------------------------------------
 
@@ -224,7 +224,7 @@ CREATE TABLE `xucp_sponsors` (
 --
 
 INSERT INTO `xucp_sponsors` (`id`, `sponsor_name`, `sponsor_url`, `sponsor_image`, `sponsor_text`) VALUES
-(1, 'DerStr1k3r.com', 'https://derstr1k3r.com', 'https://derstr1k3r.com/public/assets/images/logo-dark.png', '[b]Developer from this xUCP Free V5 & xUCP Pro V5 & xUCP Ultimate V5.[/b]');
+(1, 'Str1k3r.com', 'https://str1k3r.com', 'https://str1k3r.com/public/assets/images/logo-dark.png', '[b]Developer from this xUCP Free V5 & xUCP Pro V5 & xUCP Ultimate V5.[/b]');
 
 -- --------------------------------------------------------
 
